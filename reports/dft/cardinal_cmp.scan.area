@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : cardinal_cmp
+Version: Y-2026.03
+Date   : Sun Oct 11 16:52:43 2026
+****************************************
+
+Library(s) Used:
+
+    gscl45nm (File: /tools/PDK/NCSU45PDK/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+
+Number of ports:                        24435
+Number of nets:                        566007
+Number of cells:                       546148
+Number of combinational cells:         479732
+Number of sequential cells:             66304
+Number of macros/black boxes:               0
+Number of buf/inv:                     150193
+Number of references:                      35
+
+Combinational area:            1171487.299433
+Buf/Inv area:                   216875.259032
+Noncombinational area:          528979.930664
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1700467.230098
+Total area:                 undefined
+1

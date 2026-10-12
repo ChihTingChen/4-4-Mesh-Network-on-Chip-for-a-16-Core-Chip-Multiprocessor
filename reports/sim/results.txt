@@ -1,0 +1,6 @@
+[rtl] period=10  timing-check messages=0  result=PASS
+[pnr_1.15_p1.5] period=1.5  timing-check messages=0  result=PASS
+[scan_pnr_flush] SCAN FLUSH TEST: chains=16 length=4144 checked=134656 errors=0  => PASS  timing-check messages=0
+[scan_pnr_func_p1.5] period=1.5  timing-check messages=0  result=PASS
+[scan_1.15_sdf_p10] SCAN FLUSH TEST: chains=16 length=4144 checked=134656 errors=0  => PASS  timing-check messages=0
+[ne_p1.45] period=1.45  timing-check messages=0  result=PASS

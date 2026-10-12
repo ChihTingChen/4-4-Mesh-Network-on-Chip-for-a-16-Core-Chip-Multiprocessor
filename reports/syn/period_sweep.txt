@@ -1,0 +1,8 @@
+# DC sweep (bottom-up + in-context), spec constraints: I/O delay 1.0 ns, clock latency 0.5 ns
+# period  WNS(ns)  total_cell_area(um^2)  ADP(um^2*ns)   note
+1.50      0.00     1227676.6              1841515        max_cap lib fix not yet active (run before fix)
+1.40      0.00     1230999.2              1723399        max_cap lib fix not yet active
+1.30      0.00     1234050.1              1604265        max_cap lib fix not yet active
+1.20      0.00     1234357.1              1481228
+1.15      0.00     1240880.3              1427012        <- smallest passing period (chosen)
+1.10     <0        1245963.8              -              FAIL (TNS -3.07 ns, 2048 paths): reg->output ports (clk->Q > P - 1.0 ns output budget), I/O-bound

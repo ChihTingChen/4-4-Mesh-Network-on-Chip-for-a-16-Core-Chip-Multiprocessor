@@ -1,0 +1,27 @@
+Cardinal CMP - stuck-at ATPG on the post-route scan netlist (pnr/scan_1.15_p1.5_v2)
+==================================================================================
+Tools      : Atalanta 2.0 (open-source FAN ATPG, Virginia Tech) + Xcelium 25.09 validation
+Model      : full-scan combinational ATPG; DFF Q = PPI, DFF D = PPO; chip I/O = PI/PO
+             fault universe = stuck-at-0/1 on every pin of every non-clock cell (uncollapsed)
+             16 tile partitions + top; each tile includes exact boundary context (fan-in of
+             incoming nets back to neighbour scan flops, fan-out of outgoing nets to the
+             capturing flops) -> equivalent to full-chip ATPG under the single-fault model
+Faults     : 3,671,220 pin faults
+  DT  detected by ATPG patterns           3,500,687 (3,500,683 + 4 from the high-effort rerun)
+  DI  clock-tree / DFF CLK pins (flush)     167,024
+  UD  proven redundant                        3,399  (router: NIC injects only on polarity 0,
+                                                       router writes pe_even only on polarity 1
+                                                       -> even-VC write path from the NIC is dead logic)
+  AU  aborted (b=1000, phase-2 B=10000)         110
+FAULT COVERAGE = 99.904 %     TEST COVERAGE (excl. UD) = 99.997 %
+Patterns   : ~2,800 per tile after compaction (max 2,885), 45,204 summed over tiles
+Test time  : 16 chains x 4,144 flops; applying tile pattern sets one after another:
+             45,204 x 4,145 cycles @ 10 ns shift = 1.87 s (no compression)
+Validation : parallel-load gate-level simulation of the post-route netlist + SDF (Xcelium),
+             3 tiles (00 corner/biggest context, 11 inner, 33 corner), 31 patterns each:
+             670,592 captured bits, 0 mismatches vs. predicted responses;
+             150 sampled faults injected with force: 150/150 behave as the model predicts
+             (one injected on a multi-fanout input pin acted as the net-stem fault because of
+              Xcelium port collapsing; its effect matched the stem-fault prediction exactly)
+Scan-chain integrity separately verified by the flush test (pre/post-layout, SDF).
+Not covered: transition (at-speed) faults, bridging faults, test compression.

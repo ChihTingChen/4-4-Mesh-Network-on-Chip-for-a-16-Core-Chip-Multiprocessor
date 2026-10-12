@@ -1,0 +1,6 @@
+scan style      : mux-D (MUX2X1 + INVX1 in front of DFFPOSX1), non-inverting
+scan enable     : test_se (active high)
+chains          : 16 (one per tile: router -> nic -> cpu)
+chain length    : 4144  (router 1286, nic 195, cpu 2663)
+scan flops      : 66304
+total flops     : 66352

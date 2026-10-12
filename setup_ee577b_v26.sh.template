@@ -1,0 +1,10 @@
+# Tool environment used by the run scripts (sourced as setup_ee577b_v26.sh).
+# Fill in your site's license servers and install paths.
+export SNPSLMD_LICENSE_FILE=<port>@<synopsys-license-server>
+export LM_LICENSE_FILE=<port>@<cadence-license-server>
+export DC_HOME=/tools/synopsys/syn/Y-2026.03          # Design Compiler
+export PT_HOME=/tools/synopsys/prime/Y-2026.03        # PrimeTime
+export INV_HOME=/tools/cadence/DDI251/INNOVUS251      # Innovus 25.1
+export CFM_HOME=/tools/cadence/CONFRML252             # Conformal LEC
+export XCELIUM_HOME=/tools/cadence/XCELIUM2509        # Xcelium
+export PATH=$DC_HOME/bin:$PT_HOME/bin:$INV_HOME/tools/bin:$CFM_HOME/tools.lnx86/bin:$XCELIUM_HOME/tools.lnx86/inca/bin/64bit:$PATH

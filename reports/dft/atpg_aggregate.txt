@@ -1,0 +1,35 @@
+partition    faults       DT     UD    AU patterns      FC%
+tile00       217996   217775    213     8     2817   99.899
+tile01       219084   218868    209     7     2820   99.901
+tile02       219000   218783    211     6     2821   99.901
+tile03       216818   216597    213     8     2843   99.898
+tile10       219178   218960    214     4     2860   99.901
+tile11       220604   220379    212    13     2836   99.898
+tile12       220360   220144    213     3     2772   99.902
+tile13       218236   218013    215     8     2761   99.898
+tile20       219166   218950    210     6     2818   99.901
+tile21       220522   220301    214     7     2885   99.900
+tile22       220680   220460    214     6     2825   99.900
+tile23       218388   218166    217     5     2854   99.898
+tile30       217062   216843    211     8     2834   99.899
+tile31       218898   218680    211     7     2821   99.900
+tile32       219102   218878    213    11     2810   99.898
+tile33       216694   216478    209     7     2817   99.900
+top            2408     2408      0     0        2  100.000
+
+DI (clock-tree + DFF CLK pins, flush test): 167024
+total pin faults 3671220, detected 3667707, UD 3399, AU 114
+FAULT COVERAGE = 99.904 %   TEST COVERAGE = 99.997 %
+patterns: sum over partitions 45196, max 2885
+
+undetected faults by block / pin:
+  router pin D     2052
+  router pin C     1078
+  router pin A     105
+  router pin Y     67
+  router pin B     64
+  cpu    pin B     63
+  cpu    pin A     59
+  cpu    pin Y     17
+  cpu    pin C     4
+  nic    pin C     4

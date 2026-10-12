@@ -1,0 +1,11 @@
+Static IR drop analysis (post-route, 1.5 ns)
+VDD = 1.1 V, total power = 1847.33 mW, total current = 1679.39 mA, 375980 instances
+
+[vdd] grid nodes not connected to the ring: 0 (carrying 0.000 mA of load current)
+[vdd] worst drop per layer (mV): metal1=19.5, metal2=19.3, metal3=18.9, metal4=18.2, metal5=16.8, metal6=15.4, metal7=14.2, metal8=13.8, metal9=12.8, metal10=12.5
+[vdd] nodes=112684 supply(ring) nodes=114 isolated/floating nodes=0
+[vdd] worst static drop = 19.53 mV (1.78% of VDD), mean on M1 rails = 12.64 mV
+[gnd] grid nodes not connected to the ring: 0 (carrying 0.000 mA of load current)
+[gnd] worst drop per layer (mV): metal1=26.7, metal2=26.5, metal3=26.1, metal4=25.4, metal5=23.9, metal6=22.4, metal7=21.3, metal8=21.0, metal9=20.4, metal10=20.1
+[gnd] nodes=112684 supply(ring) nodes=108 isolated/floating nodes=0
+[gnd] worst static drop = 26.72 mV (2.43% of VDD), mean on M1 rails = 14.24 mV
