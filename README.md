@@ -103,8 +103,6 @@ With the 16 chains shifting in parallel and each tile's patterns applied one aft
 
 ## Innovus screenshots
 
-
-
 | Floorplan, tile guides, and I/O pins | Power grid |
 |---|---|
 | ![Floorplan](docs/screenshots/01_floorplan_pins.png) | ![Power grid](docs/screenshots/02_power_grid.png) |
@@ -113,13 +111,9 @@ With the 16 chains shifting in parallel and each tile's patterns applied one aft
 |---|---|
 | ![Placement](docs/screenshots/03_placement.png) | ![Clock tree](docs/screenshots/04_clock_tree.png) |
 
-| Routed chip | Routed detail |
-|---|---|
-| ![Routed chip](docs/screenshots/05_routed_chip.png) | ![Routed detail](docs/screenshots/06_routed_zoom.png) |
-
-| Placement density |
+| Final layout (after routing and signoff fixes) |
 |---|
-| ![Placement density](docs/screenshots/07_congestion_map.png) |
+| ![Final layout](docs/screenshots/05_final_layout.png) |
 
 ## Plots
 
