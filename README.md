@@ -1,3 +1,4 @@
+
 # 4×4 Mesh Network-on-Chip for a 16-Core Chip Multiprocessor
 
 16 small 64-bit SIMD processors connected by a 4×4 mesh NoC. I took it from RTL to a routed, signed-off layout in FreePDK45 (45 nm), using Design Compiler, Innovus, PrimeTime, Conformal, and Xcelium. This started as a course project (USC EE577B), and I kept going on the implementation side well past what the class required.
@@ -12,6 +13,9 @@
 - The netlist matches the RTL in formal checks (Conformal LEC), both after synthesis and after routing.
 
 The original version of this design needed 4.89M µm² and only routed at 100 ns. Most of the improvement came from the RTL: an iterative SIMD multiply/divide/sqrt unit replaced 30 DesignWare pipelines per core, and the CPU became a 6-stage pipeline where every chip output comes straight from a flop.
+| Final layout with power grid |
+|---|
+| ![Final layout](docs/screenshots/05_final_layout.png) |
 
 ## Design
 
@@ -115,30 +119,4 @@ With the 16 chains shifting in parallel and each tile's patterns applied one aft
 |---|
 | ![Final layout](docs/screenshots/05_final_layout.png) |
 
-## Plots
 
-Static IR drop on the M1 rails, from my solver. PrimeTime slack for every endpoint after routing.
-
-| IR drop (vdd) | Post-route slack |
-|---|---|
-| ![IR drop map](docs/figures/ir_map_vdd_bumps.png) | ![Slack histogram](docs/figures/pt_postroute_hist.png) |
-
-## Repository
-
-```
-design/            RTL
-cardinal_cmp.tcl   synthesis script
-scripts/           scan insertion, Innovus P&R, PrimeTime, Conformal, IR-drop tools
-dft/atpg/          ATPG model converter and pattern-validation testbenches
-sim/, tb/          simulation scripts, scan-chain testbench
-reports/           timing, area, power, LEC, ATPG, and IR reports
-docs/              screenshots, plots, and a longer write-up (in Chinese)
-```
-
-The scripts expect the FreePDK45 kit and a `setup_ee577b_v26.sh` with your tool paths (see the `.template` file). The course testbench, test programs, and memory models aren't included, and neither are the PDK files or large layout outputs (GDS, DEF, SPEF).
-
-## What's missing
-
-- ATPG covers stuck-at faults only and comes from an open-source tool, so the numbers may differ slightly from TetraMAX or Modus.
-- IR drop is static, using estimated switching activity.
-- I only had one timing corner, since the library provides just one.
