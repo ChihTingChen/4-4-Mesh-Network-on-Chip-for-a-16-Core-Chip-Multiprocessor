@@ -111,7 +111,7 @@ With the 16 chains shifting in parallel and each tile's patterns applied one aft
 |---|---|
 | ![Placement](docs/screenshots/03_placement.png) | ![Clock tree](docs/screenshots/04_clock_tree.png) |
 
-| Final layout (after routing and signoff fixes) |
+| Final layout with power grid |
 |---|
 | ![Final layout](docs/screenshots/05_final_layout.png) |
 
